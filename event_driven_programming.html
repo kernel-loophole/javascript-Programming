@@ -1,0 +1,103 @@
+<html>
+    <style>
+        circle:hover{
+            fill: green;
+        }
+    </style>
+    <body>
+        <h1 id="heading"> move the mouse to change color</h1>
+        <svg width='100',height='100'>
+            <circle cx="50" cy="50" r="40" stoke="blue",stroke-width="4" fill="yellow" />
+        <rect x='50' y='50' rx="20" ry="20"
+        height='150' width='150'
+        onclick="style.fill='green'"/>
+        </svg>
+        <button id="clickme">clickme</button>
+        <div id="timedate"></div>
+        <div id="click"></div>
+        <div id="check"></div>
+        
+<div id="changecolor"> move mouse o change color</div>
+<div class="highlight">text is highlight</div>
+<div> not highlight</div>
+<div class="highlight">aganin highlight</div>
+<input type="text" id="name">
+    </br>
+WELCOME <span id="yourname"></span>
+    </body>
+    <script>
+        var clickthe=0;
+                             //              ********NOTE*********
+                             /// a class have multi same name in same html page
+                             //but id is unique in a html page
+                             //
+                             //             ***********************
+        function textcolor()//change color of text when user move mouse over to red
+        {
+            var getthat=document.getElementsByClassName("highlight");//get the highlight id
+            for( var i=0; i<getthat.length;i++)
+            {
+                getthat[i].style.color='red';
+            }
+        }
+        function makenormal()//change color of text when user move mouse out to normal 
+        {
+            var getthat=document.getElementsByClassName("highlight");
+            for( var i=0; i<getthat.length;i++)
+            {
+                getthat[i].style.color='black';
+            }
+        }
+
+        //
+        //event driven programming
+        function clickthebutton()//check how many times user click the button
+        {
+            clickthe++;
+            var button=document.getElementById("click");
+            button.innerHTML=clickthe+"times";
+            button.style.textAlign="center";
+            if(clickthe>10)
+            {
+            var large=document.getElementById("check");
+            large.innerHTML="you click so many times";
+            large.style.background='green';
+            }
+
+        }
+        function checkinput(e)
+        {
+            if(e.keyCode==13)
+            {
+                var getname=document.getElementById("name");
+                var displayname=document.getElementById("yourname");
+                displayname.innerHTML=getname.value;
+
+            }
+        }
+        var test=document.getElementById("clickme");
+        test.addEventListener('click',clickthebutton);
+        var get=document.getElementById('timedate');
+        //get the id of change color
+        var change =document.getElementById("changecolor");
+        //change the color of text when mouse is hover
+        change.addEventListener('mouseover',textcolor);
+        //also make it normal
+        change.addEventListener('mouseout',makenormal);
+        //display current date in HTML inner 
+        get.innerHTML=Date();
+        get.style.background='red';
+        var displayinput=document.getElementById("name");
+        displayinput.addEventListener("keyup",checkinput);
+       //heading ID
+        let changeheading=document.getElementById("heading");
+        //function to change background color 
+        changeheading.addEventListener("mouseover",function(){
+            changeheading.style.background='red';
+        });
+        //function to set the background to black
+        changeheading.addEventListener("mouseout",function(){
+            changeheading.style.background='black';
+        });
+    </script>
+</html>
