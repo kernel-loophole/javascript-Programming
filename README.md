@@ -1,3 +1,3 @@
 # javascript-jquery-
-![Optional Text](image.png)
+![Optional Text](js.png)
  simple DOM API  use in javascript. 
