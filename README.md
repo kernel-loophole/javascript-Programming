@@ -14,4 +14,14 @@
       $("#after").insertBefore('#before').wrap('<ol id="nodes></ol>');
       });
  ```
-  
+  # Events
+  ```let number1 = document.getElementById("num1").value;
+let number2 = document.getElementById("num2").value;
+
+var button = document.querySelector("button");
+button.addEventListener("click", () => {
+    let number1 = document.getElementById("num1").value;
+    let number2 = document.getElementById("num2").value;
+    document.getElementById("te").innerHTML = number1 * number2;
+})
+```
