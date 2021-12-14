@@ -26,3 +26,13 @@ button.addEventListener("click", () => {
     document.getElementById("te").innerHTML = number1 * number2;
 })
 ```
+
+  # Scroll Events
+  ```python
+   window.addEventListener("scroll", () => {
+
+            var ch = document.querySelector("h2");
+            ch.body.style.background = "yellow";
+
+        })
+```
