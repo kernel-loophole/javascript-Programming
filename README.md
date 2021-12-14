@@ -1,6 +1,5 @@
-# javascript-jquery-
-![Optional Text](js.png)
- # simple DOM API  use in javascript.
+
+ #  DOM API  use in javascript.
  # Jquery.
  ```javascript
   $(document).ready(function(){
@@ -28,7 +27,7 @@ button.addEventListener("click", () => {
 ```
 
   # Scroll Events
-  ```python
+  ```javascript
    window.addEventListener("scroll", () => {
 
             var ch = document.querySelector("h2");
