@@ -115,10 +115,10 @@ let test_json = JSON.stringify({
    console.log(/\p{Script=Greek}/u.test("α"));
    console.log(/\p{Alphabetic}/u.test("!"));
     if (re1.test(input2)) {
-        t.innerHTML = "good " + date;
+        t.innerHTML = "the pattern  match " + date;
         return;
     } else {
-        t.innerHTML = "not good" + date;
+        t.innerHTML = "the pattern not match" + date;
         return;
     }
 ```
