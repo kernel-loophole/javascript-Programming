@@ -26,6 +26,26 @@ button.addEventListener("click", () => {
 })
 ```
 
+  # Maps and Objects
+  ```Ruby
+  let adder = new Map();
+adder.set("abc", 124);
+var obj = {
+        name: "abc",
+        age: 12,
+        address: "abcc,pakistan"
+    };
+     for (const i in obj) {
+        t.innerHTML += i;
+    }
+    //loop through maps
+    for (const [key, value] of adder) {
+
+
+        t.innerHTML += key + value;
+    }
+```
+
   # Scroll Events
   ```javascript
    window.addEventListener("scroll", () => {
