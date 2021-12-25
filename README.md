@@ -108,4 +108,18 @@ let test_json = JSON.stringify({
     evnts: ["events", "evnts"]
 });
 ```
+  # Regular Expression
+  ```javascript
+   let re1 = new RegExp("[0-9][a-z][A-Z]");
+   console.log(/ 🍎 {3}/.test(" 🍎🍎🍎 "));
+   console.log(/\p{Script=Greek}/u.test("α"));
+   console.log(/\p{Alphabetic}/u.test("!"));
+    if (re1.test(input2)) {
+        t.innerHTML = "good " + date;
+        return;
+    } else {
+        t.innerHTML = "not good" + date;
+        return;
+    }
+```
 
