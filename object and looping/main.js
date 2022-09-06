@@ -50,3 +50,32 @@ let testing_data={
         }
     }
 }
+///looping through array 
+function looping_make()
+{
+const animal=["cat",'lion','etc'];
+for(an of animal)
+{
+console.log("this is"+an);
+// console.log("make",an);
+}
+}
+document.querySelector('button').addEventListener('onclick',()=>{
+    alert("make it");
+   
+})
+document.getElementById("testing").addEventListener('click',()=>
+{
+    alert("make it ");
+})
+function get_iser_data()
+{
+    const name=prompt("enter you name");
+    const description=prompt("enter descr");
+    // insertion of data in html 
+
+
+}
+
+var insert=document.getElementById('make');
+insert.innerHTML="testing+maks";
