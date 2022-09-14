@@ -31,3 +31,9 @@ doSomething().then(function (result) {
     console.log(`Got the final result: ${finalResult}`);
   })
   .catch(failureCallback);
+// var json_data=$.getJSON('data.json');
+// console.log(json_data)
+var data=fetch("data.json")
+  .then(response => response.json())
+  .then(json => console.log(json));
+console.log(json_data)
